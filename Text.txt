@@ -1,0 +1,40 @@
+Request
+GET /nihao?a=1&&b=2 HTTP/1.1            请求行
+Cache-Control: max-age=0				请求头部
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134
+Accept-Language: zh-Hans-CN,zh-Hans;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.91:5188
+Connection: Keep-Alive
+									body  请求数据
+请求行\r\n
+请求头部\r\n
+请求头部\r\n
+ ....\r\n
+ \r\n
+ body
+
+
+每个Hader一行一个，换行符是\r\n。
+head和body \r\n\r\n
+Respose
+响应
+HTTP/1.1 200 ok									状态行 中间是空格
+Date:Sat,31 Dec 2005 23:59:59 GMT		        消息报头
+Content-Type: texthtml;charset=ISO-8859-1
+Content-Length: 122													
+														空行
+<html>														响应正文
+<head>
+.....
+</body>
+</html>
+
+状态行\r\n
+消息报头\r\n
+消息报头\r\n
+  .....\r\n
+\r\n
+响应正文

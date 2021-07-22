@@ -1,0 +1,43 @@
+{
+  "iothreads": 4,
+  "workthreads": 4,
+  "mysql": {
+    "host": "119.45.184.103",
+    "port": 3306,
+    "user": "clock",
+    "pass": "Clock_987785",
+    "db": "clockintime"
+  },
+  "vsql": [
+    {
+      "vpath": "/tj/location?tidset=1",
+      "desc": "统计版本号",
+      "sql": "select version()"
+    },
+    {
+      "vpath": "/tj/sex?tidset=1",
+      "desc": "统计toy_row",
+      "sql": "select count(*)from toy.toy"
+    },
+    {
+      "vpath": "/tj/sf?name=1",
+      "desc": "测试",
+      "sql": "SELECT course, ver,grade,term,tdesc,img FROM ncourse limit 10"
+    },
+    {
+      "vpath": "/tj/sf?dsname=1",
+      "desc": "测试1",
+      "sql": "SELECT course, ver,grade,term,tdesc,img FROM ncourse limit 5"
+    },
+    {
+      "vpath": "/tj/sfa?dasname=1",
+      "desc": "测试2",
+      "sql": "SELECT course, ver,grade,term,tdesc,img FROM ncourse limit 4"
+    },
+    {
+      "vpath": "/tj/sfa?daadfsname=1",
+      "desc": "测试4",
+      "sql": "SELECT course, ver,grade,term,tdesc,img FROM ncourse limit 3"
+    }
+  ]
+}
